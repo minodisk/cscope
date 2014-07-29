@@ -1,0 +1,22 @@
+{
+  "name": "cscope",
+  "version": "0.0.0",
+  "description": "cscope ======",
+  "main": "lib/cscope.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/minodisk/cscope.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minodisk/cscope/issues"
+  },
+  "homepage": "https://github.com/minodisk/cscope",
+  "dependencies": {
+    "typed-coffee-script": "^0.12.2"
+  }
+}
