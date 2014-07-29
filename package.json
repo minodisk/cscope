@@ -18,5 +18,10 @@
   "homepage": "https://github.com/minodisk/cscope",
   "dependencies": {
     "typed-coffee-script": "^0.12.2"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "gulp": "^3.8.6",
+    "gulp-coffee": "^2.1.1"
   }
 }
