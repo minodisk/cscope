@@ -173,7 +173,7 @@
         estraverse.traverse(this._syntax, {
             enter: function (node) {
                 scope = scopeManager.acquire(node) || scope;
-                if (node.type === esprima.Syntax.Identifier) {
+                if (node.type === esprima.Syntax.Identifier && node.loc != null) {
                     // if (node.range[0] <= pos && node.range[1] >= pos) {
                     if (node.loc.start.column <= pos && node.range[0] + node.name.length >= pos) {
                         identifier = node;
