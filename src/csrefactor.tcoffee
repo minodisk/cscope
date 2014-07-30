@@ -15,4 +15,4 @@ class CSContext
     @context.setCode jsAst
 
   identify: (pos :: Int) ->
-    @context.idenfity pos
+    @context.identify pos
