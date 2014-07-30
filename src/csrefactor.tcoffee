@@ -1,0 +1,18 @@
+{ parse, compile } = require 'typed-coffee-script'
+{ Context } = require '../vender/esrefactor'
+
+exports.Context =
+class CSContext
+
+  constructor: (code :: String) ->
+    @context = new Context
+    if code?
+      @setCode code
+
+  setCode: (code :: String) ->
+    csAst = parse code, raw: true
+    jsAst = compile csAst, bare: true
+    @context.setCode jsAst
+
+  identify: (pos :: Int) ->
+    @context.idenfity pos

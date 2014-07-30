@@ -1,27 +1,31 @@
 {
-  "name": "cscope",
+  "name": "csrefactor",
   "version": "0.0.0",
-  "description": "cscope ======",
-  "main": "lib/cscope.js",
+  "description": "",
+  "main": "lib/csrefactor.js",
   "scripts": {
     "test": "mocha test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/minodisk/cscope.git"
+    "url": "git://github.com/minodisk/csrefactor.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/minodisk/cscope/issues"
+    "url": "https://github.com/minodisk/csrefactor/issues"
   },
-  "homepage": "https://github.com/minodisk/cscope",
+  "homepage": "https://github.com/minodisk/csrefactor",
   "dependencies": {
+    "escope": "^1.0.1",
+    "esprima": "^1.2.2",
+    "estraverse": "^1.5.1",
     "typed-coffee-script": "^0.12.2"
   },
   "devDependencies": {
     "coffee-script": "^1.7.1",
     "gulp": "^3.8.6",
-    "gulp-coffee": "^2.1.1"
+    "gulp-coffee": "^2.1.1",
+    "gulp-tcoffee": "0.0.0"
   }
 }

@@ -1,13 +1,19 @@
 gulp = require 'gulp'
 coffee = require 'gulp-coffee'
+tcoffee = require 'gulp-tcoffee'
 
 gulp.task 'watch', ->
-  gulp.watch 'src', ['compile']
+  gulp.watch 'src/**/*.tcoffee', ['tcoffee']
 
-gulp.task 'compile', ->
+gulp.task 'tcoffee', ->
   gulp
-  .src('src/cscope.tcoffee')
-  .pipe(coffee())
-  .pipe(gulp.dest('lib/cscope.js'))
+  .src 'src/**/*.tcoffee'
+  .pipe tcoffee(
+    csAst:
+      raw: true
+    jsAst:
+      bare: true
+  )
+  .pipe gulp.dest 'lib'
 
-gulp.task 'default', ['watch', 'compile']
+gulp.task 'default', ['watch', 'tcoffee']
